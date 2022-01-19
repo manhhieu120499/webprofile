@@ -1,0 +1,161 @@
+:root {
+    --primary-color: #00aefd;
+    --secondary-color: #ffa400;
+}
+/*cấu trúc để sử dụng: var(--primary-color)
+đặt biến trong css
+*/
+
+html {
+    font-size: 62.5%;
+    /* background-image: linear-gradient(to right, yellow , orange); */
+}
+
+/*chương 3: thuộc tính background gradient(làm hình nền với gragient và chữ gradient */
+.box {
+    width: 10rem;
+    height: 10rem;
+    background-image: linear-gradient(to right bottom, yellow , orange);
+
+    /*
+    direction: to right, to left, to right bottom, to left bottom, to bottom, to top, to right top, to left top
+    120 deg, có thể sử dụng độ
+    color1
+    color2
+    cấu trúc: background-image: linear-gradient(vị trí(direction),màu 1, màu 2)
+    */
+}
+
+/* .title {
+    font-weight: bold;
+    font-size: 3rem;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    color:blue;
+} */
+
+/*
+trick khắc phục khi trình duyệt không hỗ trọ background-linear gradient
+*/
+
+/* @supports not (-webkit-background-clip) {
+    .title{
+        background-image: linear-gradient(to right bottom, yellow , orange);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+} */
+
+/*hiển thị 2 hình nền với background-image*/
+/* .background {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-image:linear-gradient(to right bottom, rgba(0, 173, 253, 0.842), rgba(255, 166, 0, 0.774)),
+    url("https://images.unsplash.com/photo-1606940630684-175ee6cca725?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+} */
+
+.box2 {
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    background-color: orange;
+    border: 2px dashed black;
+    border-radius: 50%;
+    cursor: pointer;
+    /*
+    sự khác biệt giữa opacity, visibility và display
+    */
+    /*bị ẩn đi nhưng khi rê chuột vào vẫn chiếm diện tích*/
+    /* opacity: 0; */
+    /*bị ẩn đi nhưng khi rê chuột vào vẫn chiếm diện tích , nhưng không hiện pointer*/
+    /* visibility: hidden; */
+    /*ẩn luôn và không chiếm diện tích*/
+    /* display: none; */
+}
+
+/*tìm hiểu về thuộc tính shadow(phủ bóng cho khối và chữ)
+cấu trúc: box-shadow: x y blur scale color 
+cấu trúc: text-shadow: x y blur color
+*/
+.shadown {
+    width: 20rem;
+    height: 20rem;
+    background-color:var(--primary-color);
+    margin: 20rem auto;
+    box-shadow: 14px 13px 5px 3px rgb(0 0 0 / 7%);
+}
+
+.shadow-text {
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 10px -4px 6px red;
+}
+
+/*
+độ ưu tiên trong css
+
+tag < class < id < inline < !important
+1      10     100   1000      trùm không xét
+
+selector specific: (tag, class or attribute, id)
+
+css sẽ đọc từ dưới lên
+*/
+
+h3 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: blue;
+}
+
+.title {
+    color: purple;
+}
+
+#title {
+    color: orange;
+}
+
+/*
+cấu trúc về child
+*/
+li {
+    font-size: 4rem;
+}
+
+li:first-child {
+    color: yellowgreen;
+}
+
+li:last-child {
+    color: orange;
+}
+
+li:nth-child(2) {
+    color:aqua;
+}
+
+li:not(:first-child) {
+    color: red;
+}
+
+li:not(:last-child) {
+    color: blue;
+}
+
+li:nth-child(odd) {
+    color: brown;
+}
+
+li:nth-child(even) {
+    color: red;
+}
+
+li:nth-child(2n + 1) {
+    color: yellow;
+}
