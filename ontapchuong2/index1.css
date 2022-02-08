@@ -1,0 +1,82 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.box {
+    width: 200px;
+    height: 300px;
+    background-color: #ffa400;
+    text-align: center;
+    color: black;
+    padding:10px;
+    border: 4px solid yellow;
+    margin: 15px;
+    border-radius: 4px;
+}
+
+
+/* hien thi dau ba cham o mot hang bat ki */
+/* p {
+    max-width: 500px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+} */
+
+
+/*
+hien thi dau ba cham tren 1 hang
+*/
+.warm {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/*
+cu phap ngan gon cho background-image:
+background: url(duong dan) no-repeat center right / cover
+*/
+.content {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1621609764095-b32bbe35cf3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=1000&q=60);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    object-fit: cover;
+}
+
+.image {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: url(https://images.unsplash.com/photo-1644258621712-61eb0d03e182?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80);
+    object-fit: cover;
+}
+
+.link {
+    text-decoration: none;
+    text-align: center;
+    background-color: violet;
+    padding: 10px 50px;
+    margin-left: 10px;
+}
+
+.link--rounded {
+    border-radius: 4px;
+}
+
+.link--round {
+    border-radius: 20px;
+}
+
+.link:hover {
+    color: black;
+    background-color: white;
+}
