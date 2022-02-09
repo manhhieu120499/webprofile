@@ -6,7 +6,7 @@ body {
     font-family: sans-serif;
 }
 
-h2 {
+/* h2 {
     color: red;
 }
 
@@ -14,4 +14,126 @@ h2 {
     width: 10rem;
     height: 10rem;
     background-color: #ffae4f;
+    font-size: 2rem;
 }
+
+.text {
+    font-size: 4rem;
+} */
+
+/*
+first-child: xác định phần tử đầu tiên để css theo thứ tự từ trên xuống dưới hay nói cách khác là theo vị trí
+cú pháp: 
+li:first-child {
+     color: blue;   
+}    
+--> đến 1 phần tử bất kì: li:nth-child(vị trí)
+--> đến phần tử kế cuối: li:nth-last-child(vị trí)
+*/
+
+/*
+first-of-type: xác định phần tử để css theo kiểu của nó
+cú pháp: 
+li:first-of-type {
+     color: red;
+}   
+--> đến 1 phần tử bất kì: li:nth-of-type(vị trí)
+--> đến phần tử kế cuối: li:nth-last-of-type(vị trí)
+*/
+
+/* li:first-child {
+    color: blue;
+}
+
+li:last-child {
+    color: red;
+}
+
+li:nth-child(2) {
+    color: yellowgreen;
+} */
+
+p {
+    font-size: 4rem;
+}
+
+li:first-of-type {
+    color: red;
+}
+
+li:nth-of-type(3) {
+    color: aqua;
+}
+
+li:nth-of-type(2n) {
+    color: red;
+}
+
+/*
+css combinator: 
+-dấu "+": trỏ tới phần tử đứng sau liền kề nó và cùng cấp bậc
+-dấu "~": trỏ tới phần tử đứng sau không liền kề và cùng cấp
+*/
+
+h3 + .title {
+    color: green;
+}
+
+h3 + .title + .title2 {
+    color: red;
+}
+
+h3 ~ .title {
+    color: orange;
+}
+
+h3 ~.title ~ .title2 {
+    color: yellowgreen;
+}
+
+/*
+SELECTOR NÂNG CAO TRONG CSS
+*/
+
+p::first-letter {
+    color: red;
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+p::first-line {
+    color: orange;
+}
+
+a[href^="https"] {
+    color: red;
+}
+
+a[href$=".vn"] {
+    color: purple;
+}
+
+a[href*="www"] {
+    color: yellow;
+}
+
+div[data-title="value"] {
+    color: gray;
+}
+
+
+/* .box {
+    font-size: 4rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: red;
+    text-align:center;
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding: 5rem 5rem;
+    border: 2px solid black;
+    box-shadow: 14px -13px 11px 2px;
+
+} */
